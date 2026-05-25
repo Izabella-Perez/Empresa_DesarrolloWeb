@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | JIRE Web Studio</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: #00102b;
+      color: white;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    header{
+      background: linear-gradient(to right, #023b9c, #023b9c);
+      padding: 15px 20px;
+    }
+
+    .nav{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo img{
+      width: 180px;
+    }
+
+    .menu{
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .menu a{
+      color: white;
+      font-size: 14px;
+    }
+
+    .btn{
+      background: #2d7dff;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      width: fit-content;
+      margin: auto;
+    }
+
+    main{
+      padding: 50px 20px;
+      display: grid;
+      gap: 50px;
+    }
+
+    .contenido{
+      display: grid;
+
+      gap: 40px;
+    }
+    .contenido2{
+      display: grid;
+      gap: 40px;
+    }
+
+     .contenido3{
+      display: grid;
+      gap: 40px;
+    }
+    
+    .subtitulo{
+      color: #2d7dff;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    h1{
+      font-size: 35px;
+    }
+
+    h2{
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      color: #d3d3d3;
+      line-height: 1;
+      font-size: 15px;
+    }
+
+    .linea{
+      width: 60px;
+      height: 4px;
+      background: #2d7dff;
+      border-radius: 10px;
+    }
+
+    .mvv{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .card{
+      border: 1px solid #2d7dff;
+      padding: 25px;
+      border-radius: 12px;
+      background: #0c2652;
+    }
+
+    .card h3{
+      margin-bottom: 15px;
+      color: #8eb2ff;
+    }
+
+    .equipo{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .persona{
+      border: 1px solid #2d7dff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      background: #0c2652;
+    }
+
+    .persona h4{
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .persona span{
+      color: #8eb2ff;
+      font-size: 14px;
+    }
+
+    .footer{
+      background: #0c2652;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .footer h3{
+      margin-bottom: 10px;
+    }
+    .texto{
+  display: grid;
+  gap: 20px;
+}
+
+.imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+    @media(min-width:480px){
+      .contenido{
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / 2;
+      }
+      .imagen{
+        grid-column: 2 / 3;
+        width: 80%;
+      }
+      .nav{
+        grid-template-columns: 1fr;
+      }
+
+      .mvv{
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .equipo{
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .footer{
+        font-size: 16px;
+      }
+
+    }
+
+    @media(min-width:768px){
+      .contenido{
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+      .imagen{
+        grid-column: 2 / 3;
+        width: 100%;
+      }
+      .nav{
+        grid-template-columns: 1fr auto auto;
+        text-align: left;
+      }
+
+      .btn{
+        margin: 0;
+      }
+
+      .mvv{
+        grid-template-columns: repeat(3,1fr);
+      }
+
+      .equipo{
+        grid-template-columns: repeat(3,1fr);
+      }
+
+      h1{
+        font-size: 50px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="nav">
+
+      <div class="logo">
+        <img src="letralogo.png" alt="">
+      </div>
+
+      <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Portafolio</a>
+        <a href="nosotros.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <a href="contacto.html" class="btn">Cotiza tu proyecto</a>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="contenido">
+
+      <div class="texto">
+        
+        <p class="subtitulo">Quiénes somos</p>
+
+        <h1>JIRE Web Studio</h1>
+
+        <div class="linea"></div>
+
+        <p>
+          Somos un equipo apasionado por el desarrollo web y la creación de soluciones digitales modernas. Nos enfocamos en diseñar páginas web atractivas, funcionales y adaptables a cualquier dispositivo.
+        </p>
+
+        <p>
+          Nuestro compromiso es brindar proyectos profesionales que transmitan confianza, creatividad e innovación para cada cliente.
+        </p>
+
+      </div>
+
+      <div class="imagen">
+        <img src="equipo.png" alt="">
+      </div>
+
+    </section>
+
+    <section class="contenido2">
+
+      <p class="subtitulo">Nuestra identidad</p>
+
+      <h2>Lo que nos define</h2>
+
+      <div class="linea"></div>
+
+      <div class="mvv">
+
+        <div class="card">
+          <h3>Misión</h3>
+
+          <p>
+            Desarrollar soluciones web modernas y funcionales que ayuden a mejorar la presencia digital de empresas y emprendimientos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Visión</h3>
+
+          <p>
+            Ser reconocidos como un equipo creativo e innovador en el área del desarrollo web y diseño digital.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Valores</h3>
+
+          <p>
+            Responsabilidad, creatividad, trabajo en equipo e innovación son los pilares que representan nuestro proyecto.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="contenido3">
+
+      <p class="subtitulo">Nuestro equipo</p>
+
+      <h2>Integrantes</h2>
+
+      <div class="linea"></div>
+
+      <div class="equipo">
+
+        <div class="persona">
+          <h4>Izabella Pérez</h4>
+          <span>Coordinadora</span>
+        </div>
+
+        <div class="persona">
+          <h4>Enrique Mejía</h4>
+          <span>Integrante</span>
+        </div>
+
+        <div class="persona">
+          <h4>Jhohan Melgar</h4>
+          <span>Integrante</span>
+        </div>
+
+        <div class="persona">
+          <h4>Jafet Mejía</h4>
+          <span>Integrante</span>
+        </div>
+
+        <div class="persona">
+          <h4>Josett Ramos</h4>
+          <span>Integrante</span>
+        </div>
+
+        <div class="persona">
+          <h4>Rogel Flores</h4>
+          <span>Integrante</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <h3>Contacto</h3>
+
+    <p>
+      jire5.1@gmail.com | +504 9999-9999 | Comayagua, Honduras
+    </p>
+
+    <p>
+      Creamos soluciones digitales modernas para impulsar negocios y marcas.
+      © 2026 JIRE Web Studios - Todos los derechos reservados
+    </p>
+
+  </footer>
+
+</body>
+</html>
