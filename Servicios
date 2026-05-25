@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | JIRE Web Studio</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav">
+      <div class="logo">
+        <img src="letralogo.png" alt="" >
+      </div>
+      <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Portafolio</a>
+        <a href="nosotros.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <a href="contacto.html" class="btn">Cotiza tu proyecto</a>
+    </div>
+  </header>
+
+    <h1>Servicios destacados</h1>
+<p>
+  Contamos con algunos servicios especializados en satisfacer las necesidades
+  y peticiones solicitadas por nuestros clientes, tales como:
+</p>
+
+<div class="galeria">
+
+    <div class="c1">
+        <img src="https://datos.gob.es/sites/default/files/styles/wide/public/blog/image/04_0.jpg?itok=8FmuVgOz" alt="Desarrollo web">
+        <div class="c1-text">Desarrollo web</div>
+        <p>Creamos sitios web modernos, rápidos y personalizados para adaptarse a las necesidades de cada cliente y negocio.</p>
+    </div>
+
+    <div class="c2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1w_JNHxHHmHFlYhedqCnEt6ZpJexMOWNoEw&s" alt="Diseño UI/UX">
+        <div class="c2-text">Diseño UI/UX</div>
+        <p>Diseños intuitivos y atractivos enfocados en mejorar la experiencia y navegación del usuario.</p>
+    </div>
+
+    <div class="c3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_pa2OR0YxBk3oNkZ2yhQ8L21wprefyqJcg&s" alt="Responsive design">
+        <div class="c3-text">Responsive design</div>
+        <p>Páginas optimizadas para celulares, tablets y computadoras para garantizar una visualización adaptable.</p>
+    </div>
+
+    <div class="c4">
+        <img src="https://vilmanunez.com/wp-content/uploads/2018/06/tiendas-online.png" alt="Tiendas online" alt="Tiendas online">
+        <div class="c4-text">Tiendas online</div>
+        <p>Soluciones de comercio electrónico personalizadas para vender productos y servicios en línea.</p>
+    </div>
+
+</div>
+<footer class="footer">
+    <h3>Contacto</h3>
+    <p>jire5.1@gmail.com   |    +504 9999-9999    |    Comayagua,Honduras</p>
+    <p>Creamos soluciones digitales modernas para impulsar negocios y marcas. © 2026 JIRE Web Studios - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
