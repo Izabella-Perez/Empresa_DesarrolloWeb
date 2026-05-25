@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | JIRE Web Studio</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#bed5ff;
+      color:#0F172A;
+    }
+    a{
+      text-decoration: none;
+    }
+    header{
+  background: linear-gradient(to right, #023b9c, #023b9c);
+  padding: 15px 20px;
+}
+
+.nav{
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.logo img{
+  width: 180px;
+  object-fit: contain;
+}
+
+.menu{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: center;
+  gap: 15px;
+}
+
+.menu a{
+  color: white;
+  font-size: 14px;
+}
+
+.btn{
+  background: #2d7dff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  width: fit-content;
+  margin: auto;
+}
+    .galeria{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:60px 25px;
+    }
+
+    .galeria h2{
+      text-align:center;
+      font-size:2.3rem;
+      margin-bottom:15px;
+    }
+
+    .descripcion{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      margin-bottom:45px;
+      color:#555;
+      line-height:1.7;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+    }
+
+    .tarjeta{
+      background:#f4f7ff;
+      border:1px solid #d0dcff;
+      border-radius:18px;
+      overflow:hidden;
+      transition:.4s ease;
+    }
+
+    .tarjeta:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 25px rgba(0,0,0,.15);
+    }
+
+    .tarjeta-img{
+      width:100%;
+      height:220px;
+      overflow:hidden;
+    }
+
+    .tarjeta-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.4s ease;
+    }
+
+    .tarjeta:hover img{
+      transform:scale(1.08);
+    }
+
+    .tarjeta-info{
+      padding:20px;
+    }
+
+    .categoria{
+      display:inline-block;
+      background:#0F172A;
+      color:#8eb2ff;
+      padding:6px 14px;
+      border-radius:20px;
+      font-size:.7rem;
+      font-weight:bold;
+      margin-bottom:14px;
+      text-transform:uppercase;
+    }
+
+    .tarjeta-info h3{
+      margin-bottom:10px;
+      font-size:1rem;
+    }
+
+    .tarjeta-info p{
+      color:#555;
+      line-height:1.7;
+      font-size:.88rem;
+      margin-bottom:18px;
+    }
+
+    .btn-ver{
+      display:inline-block;
+      background:#0F172A;
+      color:#8eb2ff;
+      padding:10px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:.85rem;
+      transition:.3s;
+    }
+
+    .btn-ver:hover{
+      background:#1e3a8a;
+      color:#fff;
+    }
+
+    
+
+    .contacto{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:60px 25px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+    }
+
+    .contacto-info h2{
+      font-size:2rem;
+      margin-bottom:15px;
+    }
+
+    .contacto-info p{
+      color:#555;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+
+    .dato-contacto{
+      background:#f4f7ff;
+      border:1px solid #d0dcff;
+      padding:15px;
+      border-radius:14px;
+      margin-bottom:15px;
+      font-size:.95rem;
+    }
+
+    .formulario{
+      background:#f4f7ff;
+      border:1px solid #d0dcff;
+      border-radius:20px;
+      padding:35px;
+    }
+
+    .formulario h3{
+      margin-bottom:8px;
+      font-size:1.5rem;
+    }
+
+    .sub{
+      color:#777;
+      margin-bottom:28px;
+    }
+
+    .campo{
+      margin-bottom:20px;
+    }
+
+    .campo label{
+      display:block;
+      margin-bottom:7px;
+      font-weight:600;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea{
+      width:100%;
+      padding:13px;
+      border:1px solid #c8d8ff;
+      border-radius:12px;
+      outline:none;
+      font-size:.95rem;
+    }
+
+    .campo textarea{
+      height:110px;
+      resize:vertical;
+    }
+
+    .campo-fila{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      background:#0F172A;
+      color:#8eb2ff;
+      border:none;
+      border-radius:12px;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      background:#1e3a8a;
+      color:#fff;
+    }
+    .footer{
+    background: #0c2652;
+    color: white;
+    padding: 10px 10px 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    }
+    .footer-box h3{
+    margin-bottom: 10px;
+    }
+    
+
+    @media(max-width:992px){
+    .nav{
+    grid-template-columns: 1fr auto auto;
+   
+    }
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .contacto{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+      .nav{
+        grid-template-columns: 1fr;
+      }
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .galeria h2{
+        font-size:1.7rem;
+      }
+
+      .contacto h2{
+        font-size:1.7rem;
+      }
+
+      .campo-fila{
+        grid-template-columns:1fr;
+      }
+      .footer{
+          font-size: 18px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<header>
+    <div class="nav">
+      <div class="logo">
+        <img src="letralogo.png" alt="" >
+      </div>
+      <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Portafolio</a>
+        <a href="nosotros.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <a href="contacto.html" class="btn">Cotiza tu proyecto</a>
+    </div>
+  </header>
+  <section class="galeria">
+
+    <h2>Galería de Proyectos</h2>
+
+    <p class="descripcion">
+      Conoce algunos proyectos desarrollados por JIRE Web Studio.
+    </p>
+
+    <div class="grid">
+
+      
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Desarrollo Web</span>
+          <h3>FoodGo Restaurant</h3>
+          <p>Sitio web para restaurante con menú digital y reservas.</p>
+
+          <a href="https://www.foodandwine.com" target="_blank" class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Desarrollo Web</span>
+          <h3>SmartClass</h3>
+          <p>Plataforma educativa con inscripción en línea.</p>
+
+          <a href="https://www.coursera.org" target="_blank" class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+     
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Diseño UI/UX</span>
+          <h3>QuickDeliver App</h3>
+          <p>Diseño moderno para aplicación móvil.</p>
+
+          <a href="https://www.uber.com/us/en/deliver/" target="_blank" class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Diseño UI/UX</span>
+          <h3>Medical Dashboard</h3>
+          <p>Diseño de panel administrativo moderno.</p>
+
+          <a href="https://dribbble.com" target="_blank" class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+      
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Responsive Design</span>
+          <h3>Portfolio Responsive</h3>
+          <p>Diseño adaptable para celulares y computadoras.</p>
+
+          <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design"
+             target="_blank"
+             class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Responsive Design</span>
+          <h3>Responsive Business</h3>
+          <p>Sitio empresarial optimizado para todos los dispositivos.</p>
+
+          <a href="https://web.dev/responsive-web-design-basics/"
+             target="_blank"
+             class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+    
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Tienda Online</span>
+          <h3>NovaShop</h3>
+          <p>Tienda de moda con carrito de compras.</p>
+
+          <a href="https://www.zara.com"
+             target="_blank"
+             class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80">
+        </div>
+
+        <div class="tarjeta-info">
+          <span class="categoria">Tienda Online</span>
+          <h3>TechShop</h3>
+          <p>Tienda tecnológica con filtros y carrito.</p>
+
+          <a href="https://www.bestbuy.com"
+             target="_blank"
+             class="btn-ver">
+            Ver proyecto
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  
+
+  <section class="contacto">
+
+    <div class="contacto-info">
+
+      <h2>¿Listo para tu proyecto?</h2>
+
+      <p>
+        Completa el formulario y te contactaremos pronto.
+      </p>
+
+      <div class="dato-contacto">
+        Teléfono: +504 2772-0000
+      </div>
+
+      <div class="dato-contacto">
+        WhatsApp: +504 9999 9999
+      </div>
+
+      <div class="dato-contacto">
+        Correo: jire5.1@gmail.com 
+      </div>
+
+      <div class="dato-contacto">
+        Comayagua, Honduras
+      </div>
+
+    </div>
+
+    <form class="formulario">
+
+      <h3>Formulario de Inscripción</h3>
+
+      <p class="sub">
+        Cuéntanos sobre tu proyecto
+      </p>
+
+      <div class="campo-fila">
+
+        <div class="campo">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+
+        <div class="campo">
+          <label>Apellido</label>
+          <input type="text" placeholder="Tu apellido">
+        </div>
+
+      </div>
+
+      <div class="campo">
+        <label>Correo Electrónico</label>
+        <input type="email" placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="campo">
+        <label>Teléfono</label>
+        <input type="tel" placeholder="+504 0000-0000">
+      </div>
+
+      <div class="campo">
+        <label>Servicio</label>
+
+        <select>
+          <option>Selecciona un servicio</option>
+          <option>Sitio Web</option>
+          <option>Tienda Online</option>
+          <option>Diseño UI/UX</option>
+          <option>Responsive Design</option>
+        </select>
+
+      </div>
+
+      <div class="campo">
+        <label>Mensaje</label>
+
+        <textarea placeholder="Describe tu proyecto"></textarea>
+      </div>
+
+      <button type="submit" >
+        Enviar Solicitud
+      </button>
+
+    </form>
+
+  </section>
+<footer class="footer">
+    <h3>Contacto</h3>
+    <p>jire5.1@gmail.com   |    +504 9999-9999    |    Comayagua,Honduras</p>
+    <p>Creamos soluciones digitales modernas para impulsar negocios y marcas. © 2026 JIRE Web Studios - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
